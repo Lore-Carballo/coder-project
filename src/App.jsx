@@ -1,12 +1,11 @@
 import './App.css';
-import { NavBar } from "./assets/components/NavBar";
-import { Content } from "./assets/components/Global";
+import './assets/sass/styles.sass';
+import { Home } from "./assets/views/Home/index";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Content />
+      <Home />
     </div>
   );
 }

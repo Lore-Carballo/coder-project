@@ -1,0 +1,29 @@
+@import '../../sass/styles'
+
+.minicart 
+    width: 3em 
+    height: 3em 
+    border-radius: 50%
+    background: rgba($white, 0.3)
+    padding: 0.7em
+    position: relative
+    transition: all 0.3s ease
+    img 
+        transition: all 0.3s ease
+    &:hover 
+        cursor: pointer 
+        background: rgba($white, 0.5)
+        img 
+            transform: scale(0.9)
+            filter: invert(30%)
+    span 
+        width: 1.7em 
+        height: 1.7em 
+        border-radius: 50%
+        background: $error
+        color: $white
+        position: absolute 
+        bottom: 0
+        right: -0.7em
+        padding: 0.1em
+        font-size: 70%

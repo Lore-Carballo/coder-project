@@ -1,0 +1,31 @@
+@import '../../sass/styles'
+
+.product-card
+    width: 30%
+    background: $white 
+    border-radius: 10px
+    overflow: hidden
+    padding: 0
+    box-shadow: 3px -2px 17px 0px rgba($black,0.07)
+    transition: all 0.3s ease
+    &:hover 
+        transform: translateY(-0.5em)
+        cursor: pointer
+    .product-img 
+        width: 100%
+        min-height: 30vh 
+        padding: 2em
+        +flexbox(row, wrap, center, center, center)
+    .product-info 
+        width: 100%
+        margin-top: 1em 
+        padding: 2em
+        background: rgba($light-gray, 0.5)
+        .product-title 
+            color: $secondary-color
+        .product-excerpt 
+            margin: 1em 0
+            font-size: 85%
+        .product-price 
+            font-size: 150%
+            font-weight: 700

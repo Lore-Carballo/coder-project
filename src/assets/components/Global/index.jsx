@@ -1,4 +1,3 @@
-import '../sass/style.sass';
 
 export const Logo = () => {
     return (

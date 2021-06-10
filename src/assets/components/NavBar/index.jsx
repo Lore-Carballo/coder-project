@@ -1,5 +1,7 @@
-import '../sass/style.sass';
-import { Logo } from "./Global";
+import './styles.sass';
+
+import { Logo } from "../Global/index";
+import { MiniCart } from "../MiniCart/index";
 
 export const NavBar = () => {
     return (
@@ -13,6 +15,8 @@ export const NavBar = () => {
                     <li><a href="#">Categoría 3</a></li>
                     <li><a href="#">Categoría 4</a></li>
                 </ul>
+
+                <MiniCart /> 
             </nav>
         </header>
     )
