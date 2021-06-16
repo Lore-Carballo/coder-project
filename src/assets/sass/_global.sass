@@ -9,12 +9,14 @@ img
     margin: 0 auto
 
 .btn 
-    width: 20% 
-    margin: 2em 40%
+    width: auto 
+    min-width: 20% 
+    margin: 2em auto
     background: $secondary-color 
     color: $white
     font-weight: 500 
     border-radius: 5px
+    border: none
     transition: all 0.3s ease
     &:hover 
         background: $dark-gray
@@ -24,6 +26,12 @@ img
         padding: 1em 
         text-decoration: none 
         color: inherit
+
+button 
+    padding: 1em
+    margin: 2em auto 0 auto!important
+    &:hover 
+        cursor: pointer
 
 .page-content
     width: 100%
