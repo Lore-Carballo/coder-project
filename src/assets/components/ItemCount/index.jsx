@@ -3,8 +3,8 @@ import { useState } from "react";
 
 export const ItemCount = (props) => {
     const cantidadInicial = 1;
-    const cantidadDisponible = props.stockProducto;
     const [cantidad, setCantidad] = useState(cantidadInicial);
+    const [cantidadDisponible, setCantidadDisponible] = useState(Number(props.stockProducto));
 
     const restarCantidad = () => {
         if(cantidad === 0){
@@ -13,10 +13,9 @@ export const ItemCount = (props) => {
         setCantidad(cantidad - 1);
     };
     const sumarCantidad = () => {
-        if(cantidad === cantidadDisponible){
-            alert("Stock insuficiente");
-            return;
-            
+        if(cantidad === Number(props.stockProducto)){
+            alert("¡Stock insuficiente! Momentáneamente contamos con " + Number(props.stockProducto) + " unidades de este producto.");
+            return;            
         }
         setCantidad(cantidad + 1);
     };
