@@ -15,3 +15,12 @@ export const Content = () => {
         </div>
     )
 }
+
+export async function getData() {
+    const response = await fetch (
+        '/data/test.json'
+        //'https://api.mercadolibre.com/sites/MLA/search?q=zapatillas'
+    );
+    const data = await response.json();
+    return data.results;
+}

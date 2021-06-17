@@ -7,7 +7,7 @@ export const Home = () => {
         <div className="Home">
             <NavBar />
             <div className="page-content">
-                <ItemListContainer name={'Roberto'} categoryName={'Guitarras Acústicas'} categoryLink={'/guitarras-acusticas'} />
+                <ItemListContainer name={'Roberto'} categoryName={'Libros Deluxe'} categoryLink={'/libros-deluxe'} />
             </div>            
         </div>
     )

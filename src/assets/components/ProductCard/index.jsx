@@ -14,7 +14,6 @@ export const ProductCard = (props) => {
                     US$<span class="price">{props.price}</span>
                 </div>
                 
-
                 <ItemCount stockProducto = {props.stock}/> 
 
                 <button class="btn add-cart">
