@@ -16,10 +16,18 @@ export const Content = () => {
     )
 }
 
-export async function getData() {
+export async function getProducts() {
     const response = await fetch (
         '/data/test.json'
-        //'https://api.mercadolibre.com/sites/MLA/search?q=zapatillas'
+        // 'https://api.mercadolibre.com/sites/MLA/search?q=guitarras'
+    );
+    const data = await response.json();
+    return data.results;
+}
+
+export async function getProductDetail() {
+    const response = await fetch (
+        'https://api.mercadolibre.com/items/MLA919142773#json'
     );
     const data = await response.json();
     return data.results;

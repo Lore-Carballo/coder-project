@@ -1,9 +1,9 @@
 import './styles.sass';
 import { ItemCount } from "../ItemCount/index";
 
-export const ProductCard = (props) => {
+export const ItemDetail = (props) => {
     return (
-        <div className="product-card">
+        <div className="item-detail-container">
             <div className="product-img">
                 <img src={props.img} alt={props.title} />
             </div>
@@ -12,6 +12,9 @@ export const ProductCard = (props) => {
                 <p className="product-excerpt">{props.excerpt}</p>
                 <div className="product-price">
                     US$<span class="price">{props.price}</span>
+                </div>
+                <div className="product-description">
+                    <p>{props.description}</p>
                 </div>
                 
                 <ItemCount stockProducto = {props.stock}/> 
