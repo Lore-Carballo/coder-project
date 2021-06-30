@@ -30,5 +30,5 @@ export async function getProductDetail() {
         'https://api.mercadolibre.com/items/MLA919142773#json'
     );
     const data = await response.json();
-    return data.results;
+    return data;
 }

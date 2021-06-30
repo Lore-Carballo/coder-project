@@ -1,0 +1,45 @@
+@import '../../sass/styles'
+
+.item-detail-container
+    width: 100%
+    +flexbox(row, wrap, space-between, flex-start, flex-start)
+    padding: 5em 10%
+    .product-img
+        width: 40%
+        border: 2px solid #e8e8e8
+        padding: 3em
+        border-radius: 5px
+    .product-info
+        width: 55%
+        padding-top: 3em
+        +flexbox(row, wrap, space-between, flex-start, flex-start)
+        h3 
+            width: 80%
+            text-align: left
+            font-size: 180%
+            color: $secondary-color
+            font-weight: 700
+        .product-price
+            width: 100%
+            text-align: left
+            font-size: 250%
+            font-weight: 900
+            margin: 0.5em 0
+            opacity: 0.8
+        .product-description
+            padding-bottom: 2em
+            border-bottom: 1px solid #e8e8e8
+            margin-top: 1em
+            text-align: left
+            opacity: 0.7
+        .stock
+            width: 100%
+            text-align: left
+            margin-top: 2em
+        .item-count 
+            width: 40%
+            margin: 1em 0
+        .add-cart
+            width: 40%
+            margin: 0.5em 0 0 0!important
+            font-size: 110%

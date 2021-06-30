@@ -9,13 +9,14 @@ export const ItemDetail = (props) => {
             </div>
             <div className="product-info">
                 <h3 className="product-title">{props.title}</h3>
-                <p className="product-excerpt">{props.excerpt}</p>
-                <div className="product-price">
-                    US$<span class="price">{props.price}</span>
-                </div>
                 <div className="product-description">
                     <p>{props.description}</p>
                 </div>
+                
+                <div className="product-price">
+                    $<span className="price">{props.price}</span>
+                </div>
+                
                 
                 <ItemCount stockProducto = {props.stock}/> 
 

@@ -15,7 +15,7 @@ export const ItemDetailContainer = (props) => {
                 price: data.price,
                 stock: data.available_quantity,
                 condicion: data.condition,
-                descripcion: data.description,
+                descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             };
             setTimeout(() => {
                 setProducts(aux);
@@ -26,13 +26,12 @@ export const ItemDetailContainer = (props) => {
     
 
     return (
-        <div className="item-list">
+        <div className="item-detail">
             {
                 !!Object.keys(products).length
                 ? <ItemDetail item={products} img={products.image} title={products.title} price={products.price} stock={products.stock} description={products.descripcion} />
-                :  <h1>Loading...</h1>
+                :  <img className="loading-gif" src="/img/loading-animation.gif" alt="Cargando" />
             }
-            <div className="btn"><a href={props.categoryLink}>Ver más</a></div>
         </div>
     )    
     // return (

@@ -12,10 +12,11 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={ItemDetailContainer} />
+          {/* <Route exact path="/" component={Home} /> */}
           {/* <Route exact path='*' component={404} /> */}
 
-          <Route exact path="/item-detail" component={ItemDetailContainer} />
+          {/* <Route exact path="/item-detail" component={ItemDetailContainer} /> */}
         </Switch>        
       </div>
     </BrowserRouter>
