@@ -11,7 +11,8 @@
     "editorial":"Penguin Books Ltd",
     "language":"English",
     "stock":"8",
-    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/97801413408691-1918a247c5d5443f3516143771921963-480-0.jpg"
+    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/97801413408691-1918a247c5d5443f3516143771921963-480-0.jpg",
+    "category":"Hardback"
 }, 
 {
     "id":2,
@@ -21,7 +22,8 @@
     "editorial":"Penguin Books Ltd",
     "language":"English",
     "stock":"5",
-    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/9780141377605_11-a9ad64d677a8d1f30116143769779629-480-0.jpg"
+    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/9780141377605_11-a9ad64d677a8d1f30116143769779629-480-0.jpg",
+    "category":"Super Deluxe"
 },
 {
     "id":3,
@@ -31,6 +33,7 @@
     "editorial":"Penguin Books Ltd",
     "language":"English",
     "stock":"7",
-    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/97801413290171-c8c44c09b7c658c03a15842097688376-480-0.png"
+    "image":"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/111/169/products/97801413290171-c8c44c09b7c658c03a15842097688376-480-0.png",
+    "category":"Paperback"
 }]
 }

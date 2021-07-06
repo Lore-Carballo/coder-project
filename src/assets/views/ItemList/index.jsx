@@ -14,6 +14,7 @@ export const ItemList = (props) => {
                     // title: element.title,
                     // image: element.thumbnail,
                     // price: element.price
+                    id: element.id,
                     image: element.image,
                     title: element.title,
                     price: element.price,
@@ -38,7 +39,7 @@ export const ItemList = (props) => {
 
             {books.map((element) => {
                 return (
-                    <Item img={element.image} title={element.title} price={element.price} stock={element.stock} />
+                    <Item id={element.id} img={element.image} title={element.title} price={element.price} stock={element.stock} />
                 )
             })}           
             

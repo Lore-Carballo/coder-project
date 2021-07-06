@@ -19,6 +19,7 @@ export const Item = (props) => {
 
                 <button class="btn add-cart">
                     <Link to={'/item-detail'}>Ver Detalle</Link>
+                    {/* <Link to={{pathname: `/product/${props.id}`}}>Ver Detalle</Link> */}
                 </button>
             </div>
         </div>
