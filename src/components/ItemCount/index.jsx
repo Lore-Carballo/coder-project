@@ -28,14 +28,13 @@ export const ItemCount = (props) => {
                 Stock: {props.stockProducto}
             </div>
 
-            {/* {!cantidadMaxima ?  */}
+            {!cantidadMaxima ? 
                 <div className="item-count">
                     <button disabled={cantidad === 1} className="counter-btn" onClick={restarCantidad}>-</button>
                     <div className="counter-cantidad">{cantidad}</div>
                     <button className="counter-btn" onClick={sumarCantidad}>+</button>
                 </div> 
-            {/* :  */}
-            {/* <button className="btn checkout">Terminar Compra</button>} */}
+            : <button className="btn checkout">Terminar Compra</button>}
             
         </>
     )

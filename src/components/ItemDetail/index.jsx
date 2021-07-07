@@ -19,9 +19,9 @@ export const ItemDetail = ({item}) => {
 
                 <ItemCount stockProducto = {item.stock}/>
                 
-                <button className="btn add-cart" >
+                {/* <button className="btn add-cart" >
                         Agregar al Carrito
-                </button>
+                </button> */}
             </div>
         </div>
     )
