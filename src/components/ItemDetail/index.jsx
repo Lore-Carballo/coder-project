@@ -1,27 +1,26 @@
 import './styles.sass';
 import { ItemCount } from "../ItemCount/index";
 
-export const ItemDetail = (props) => {
+export const ItemDetail = ({item}) => {
     return (
         <div className="item-detail-container">
             <div className="product-img">
-                <img src={props.img} alt={props.title} />
+                <img src={item.image} alt={item.title} />
             </div>
             <div className="product-info">
-                <h3 className="product-title">{props.title}</h3>
+                <h3 className="product-title">{item.title}</h3>
                 <div className="product-description">
-                    <p>{props.description}</p>
+                    <p>{item.description}</p>
                 </div>
                 
                 <div className="product-price">
-                    $<span className="price">{props.price}</span>
+                    $<span className="price">{item.price}</span>
                 </div>
-                
-                
-                <ItemCount stockProducto = {props.stock}/> 
 
-                <button class="btn add-cart">
-                    Agregar al Carrito
+                <ItemCount stockProducto = {item.stock}/>
+                
+                <button className="btn add-cart" >
+                        Agregar al Carrito
                 </button>
             </div>
         </div>

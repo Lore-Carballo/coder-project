@@ -1,7 +1,7 @@
 import './styles.sass';
 import { useState } from "react";
 
-export const MiniCart = () => {
+export const CartWidget = () => {
     const cartInicial = 0;
     const [cart, setCart] = useState([cartInicial]);
     return (
