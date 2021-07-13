@@ -1,11 +1,14 @@
 import './styles.sass';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { CartWidget } from "../CartWidget";
 import { getCategories } from '../../global';
+import { ShopContext } from '../../context';
+import { Item } from '../Item';
 
-export const NavBar = (props) => {
+export const NavBar = (item) => {
+    const {cantidadRequerida} = useContext(ShopContext);
     let [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -37,7 +40,7 @@ export const NavBar = (props) => {
                         )
                     }
                 </ul>
-                <CartWidget />
+                <CartWidget cantidadCart={cantidadRequerida} nameCart={item.title} />
             </nav>
         </header>
     )

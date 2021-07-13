@@ -5,16 +5,18 @@ import { NavBar } from "./components/NavBar/index";
 import { ItemListContainer } from "./views/ItemListContainer/index";
 import { ItemDetailContainer } from "./views/ItemDetailContainer/index";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { shopContext } from './context/index';
+import { CartContext } from './context/index';
 
 function App() {
   const [listProducts, setListProducts] = useState([{id:1, name:'libro', price:150}])
   return (
     // <>
-    // {
-    //   !!Object.keys(product).length
-          // ? 
-          <shopContext.Provider value={{listProducts, setListProducts}}>
+    //  {
+    //    !!Object.keys(listproducts).length
+    //       ? 
+          // <shopContext.Provider value={{cart, setCart}}>
+          <CartContext >
+
               <div className="App">
                 <BrowserRouter>
                   <NavBar />
@@ -34,9 +36,10 @@ function App() {
                   </Switch>
                 </BrowserRouter>
               </div>
-            </shopContext.Provider>
-          // : <img className="loading-gif" src="/img/loading-animation.gif" alt="Cargando" />
-    // }
+          </CartContext>
+            // </shopContext.Provider>
+    //     : <img className="loading-gif" src="/img/loading-animation.gif" alt="Cargando" />
+    //  }
     // </>
   );
 }

@@ -1,5 +1,5 @@
 import './styles.sass';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { ItemDetail } from "../../components/ItemDetail";
 import { getProductDetail } from '../../global';

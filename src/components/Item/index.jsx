@@ -15,7 +15,7 @@ export const Item = ({ item }) => {
                     US$<span className="price">{item.price}</span>
                 </div>
                 
-                <ItemCount stockProducto = {item.stock}/> 
+                {/* <ItemCount stockProducto = {item.stock}/>  */}
 
                 <button className="btn add-cart">
                     {/* <Link to={'/item-detail'}>Ver Detalle</Link> */}

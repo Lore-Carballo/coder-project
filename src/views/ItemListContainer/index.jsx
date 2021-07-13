@@ -1,5 +1,5 @@
 import './styles.sass';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ItemList } from "../../components/ItemList/index";
 import { useEffect, useState } from 'react';
 import { getProducts, getProductsByCategory } from '../../global/index';
