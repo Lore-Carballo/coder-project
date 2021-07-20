@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
 import { CartWidget } from "../CartWidget";
 import { getCategories } from '../../global';
-import { ShopContext } from '../../context';
 import { Item } from '../Item';
 
 export const NavBar = (item) => {
-    const {cantidadRequerida} = useContext(ShopContext);
     let [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -22,6 +20,8 @@ export const NavBar = (item) => {
         waitForData();
 
     }, [])
+
+    
 
     return (
         <header>
@@ -40,7 +40,7 @@ export const NavBar = (item) => {
                         )
                     }
                 </ul>
-                <CartWidget cantidadCart={cantidadRequerida} nameCart={item.title} />
+                <CartWidget />
             </nav>
         </header>
     )
