@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { getFirestore } from "../firebase/client"
+
 export const Content = () => {
     return (
         <div className="content">
@@ -7,16 +10,44 @@ export const Content = () => {
     )
 }
 
+/*::::::::::::::::::::::::::::::::::: JSON ::::::::::::::::::::::::::::::::::::::::*/
+// export async function getProducts() {
+//     const response = await fetch('/data/test.json');
+//     const data = await response.json();
+//     return data.books;
+// }
+
+// export async function getCategories() {
+//     const response = await fetch('/data/test.json');
+//     const data = await response.json();
+//     return data.categories;
+// }
+
+// export async function getProductDetail(id) {
+//     const products = await getProducts();
+//     const product = products.find(element => element.id == id);
+//     return product;
+// }
+
+// export async function getProductsByCategory(category) {
+//     const products = await getProducts();
+//     const filteredProducts = products.filter(element => element.category == category);
+//     return filteredProducts;
+// }
+
+/*::::::::::::::::::::::::::::::::::: FIRESTORE ::::::::::::::::::::::::::::::::::::::::*/
 export async function getProducts() {
-    const response = await fetch('/data/test.json');
-    const data = await response.json();
-    return data.books;
+    const DB = getFirestore(); //Conexión con DB
+    const COLLECTION = DB.collection("Productos"); //Conexión con la collection
+    const data = await COLLECTION.get();
+    return data.docs;
 }
 
 export async function getCategories() {
-    const response = await fetch('/data/test.json');
-    const data = await response.json();
-    return data.categories;
+    const DB = getFirestore(); //Conexión con DB
+    const COLLECTION = DB.collection("Categories"); //Conexión con la collection
+    const data = await COLLECTION.get();
+    return data.docs;
 }
 
 export async function getProductDetail(id) {
