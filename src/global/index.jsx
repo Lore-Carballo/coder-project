@@ -40,14 +40,18 @@ export async function getProducts() {
     const DB = getFirestore(); //Conexión con DB
     const COLLECTION = DB.collection("Productos"); //Conexión con la collection
     const data = await COLLECTION.get();
-    return data.docs;
+    let items = data.docs.map((doc) => { return { ...doc.data(), id: doc.id }});
+    // console.log('items: ', items);
+    return items;
 }
 
 export async function getCategories() {
     const DB = getFirestore(); //Conexión con DB
     const COLLECTION = DB.collection("Categories"); //Conexión con la collection
     const data = await COLLECTION.get();
-    return data.docs;
+    let categories = data.docs.map((doc) => doc.data().Name);
+    // console.log('categories: ', categories);
+    return categories;
 }
 
 export async function getProductDetail(id) {
