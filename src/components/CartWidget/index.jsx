@@ -40,7 +40,7 @@ export const CartWidget = (props) => {
                           Cantidad: {quantity}
                         </p>
       
-                        <p class="price">
+                        <p className="price">
                           <strong>${item.price * quantity}</strong>
                         </p>
                       </div>

@@ -1,4 +1,7 @@
 import { createContext, useEffect, useState } from "react";
+import firebase from 'firebase/app';
+import '@firebase/firestore';
+import { getFirestore } from "../firebase/client"
 
 export const CartContext = createContext();
 
@@ -90,8 +93,24 @@ export function CartProvider({ children }) {
     });
   }
 
+  const createOrder = (name, phone, email) => {
+    const order = { 
+      buyer: 
+        {name, phone, email}, 
+        item: cart, 
+        total: getSubTotalPrice(), 
+        fecha: firebase.firestore.Timestamp.fromDate(new Date())
+    }
+
+    const db = getFirestore();
+    db.collection("Orders").add(order);
+
+    setCart([]);
+
+  }
+
   return (
-    <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, getItemQty, getTotalQty, getSubTotalPrice, getTotalPrice }}>
+    <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, getItemQty, getTotalQty, getSubTotalPrice, getTotalPrice, createOrder }}>
       {children}
     </CartContext.Provider>
   )
